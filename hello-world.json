@@ -1,0 +1,13 @@
+{
+  "name": "hello-world",
+  "dependencies": [
+    "react",
+    "@radix-ui/something"
+  ],
+  "files": [
+    {
+      "name": "components/hello-world.tsx",
+      "content": "import React from 'react';\nimport Something from \"@radix-ui/something\";\nimport FriendComponent from \"./friend-component\";\n\nconst HelloWorldComponent = () => \"hello world\";\n\nexport default HelloWorldComponent;"
+    }
+  ]
+}

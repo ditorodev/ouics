@@ -1,0 +1,10 @@
+{
+  "name": "friend-component",
+  "dependencies": [],
+  "files": [
+    {
+      "name": "components/friend-component.tsx",
+      "content": "const FriendComponent = () => \"hello world\";\n\nexport default FriendComponent;"
+    }
+  ]
+}

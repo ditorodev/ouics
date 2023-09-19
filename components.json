@@ -1,0 +1,23 @@
+[
+  {
+    "name": "hello-world",
+    "path": "hello-world.tsx",
+    "dependencies": [
+      "react",
+      "@radix-ui/something"
+    ],
+    "styles": [],
+    "files": [
+      "components/hello-world.tsx"
+    ]
+  },
+  {
+    "name": "friend-component",
+    "path": "friend-component.tsx",
+    "dependencies": [],
+    "styles": [],
+    "files": [
+      "components/friend-component.tsx"
+    ]
+  }
+]
