@@ -19,22 +19,11 @@ jobs:
      - name: Run generator
        run: bun run generator.ts
        
-    #  - name: Deploy to GitHub Pages
-    #    uses: peaceiris/actions-gh-pages@v3
-    #    with:
-    #      github_token: ${{ secrets.GITHUB_TOKEN }}
-    #      publish_dir: ./dist
-
      - name: Deploy to GitHub Pages
        uses: peaceiris/actions-gh-pages@v3
        with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./dist
-            allow_empty_commit: false
-            keep_files: true
-            force_orphan: true
-            enable_jekyll: true
-            include: "*.json"
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         publish_dir: ./public
         
 
     #  - name: Create Release
