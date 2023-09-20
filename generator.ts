@@ -5,8 +5,8 @@ import * as path from 'path';
 const componentsDir = './components';
 const components = fs.readdirSync(componentsDir);
 
-if (!fs.existsSync('./dist')){
-    fs.mkdirSync('./dist');
+if (!fs.existsSync('./public')){
+    fs.mkdirSync('./public');
 }
 
 async function getDependencies(file: BunFile) {
@@ -70,7 +70,7 @@ const componentsData = components.map(async component => {
 
 const _componentsData = await Promise.allSettled(componentsData);
 
-const distComponentsJSON = Bun.file('./dist/components.json').writer()
+const distComponentsJSON = Bun.file('./public/components.json').writer()
 distComponentsJSON.write(JSON.stringify(_componentsData.map(p => p.status === 'fulfilled' ? p.value : undefined).filter(Boolean), null, 2));
 distComponentsJSON.end();
 
@@ -98,7 +98,7 @@ _componentsData.forEach(async componentData => {
                     })
         };
       
-        const distComponentFile = Bun.file(`./dist/${componentData.value.name}.json`).writer();
+        const distComponentFile = Bun.file(`./public/${componentData.value.name}.json`).writer();
         distComponentFile.write(JSON.stringify(componentJson, null, 2));
         distComponentFile.end();
     }
